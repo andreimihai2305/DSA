@@ -9,5 +9,8 @@ int main(void)
         printf("ERROR: Something went wrong during allocation\n");
     }
 
-    return 0; 
+    free(&arr);
+
+    return 0;
+
 }
