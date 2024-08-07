@@ -10,7 +10,7 @@ typedef struct {
     int count;
     int* items;
 
-} DynamicArray; 
+} DynamicArray;
 
 int d_alloc(DynamicArray *arr, int size);
 int dynamic_append(DynamicArray *arr, int item);
@@ -18,9 +18,8 @@ int pop_back(DynamicArray *arr);
 
 
 int d_alloc(DynamicArray *arr, int size)
-{   
+{
     printf("Beginning allocation...\n");
-    printf("Trying to set the size...\n");
     arr->size = size;
     printf("Size set succesfully: arr->size = %d\n", arr->size);
     arr->count = 0;
@@ -39,7 +38,7 @@ int dynamic_append(DynamicArray *arr, int item)
         arr->items[arr->count] = item;
     }
     else
-    { 
+    {
         arr->size += 20;
         arr->items = (int*)realloc(arr->items, (arr->size)*sizeof(int));
         if(arr->items == NULL) return -1;
@@ -58,5 +57,3 @@ int pop_back(DynamicArray *arr)
 }
 
 #endif // DYNAMIC_ARRAY_H
-
-
