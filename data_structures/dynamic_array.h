@@ -16,7 +16,6 @@ int d_alloc(DynamicArray *arr, int size);
 int dynamic_append(DynamicArray *arr, int item);
 int pop_back(DynamicArray *arr);
 
-
 int d_alloc(DynamicArray *arr, int size)
 {
     printf("Beginning allocation...\n");
@@ -55,5 +54,4 @@ int pop_back(DynamicArray *arr)
     return arr->items[arr->count];
 
 }
-
 #endif // DYNAMIC_ARRAY_H

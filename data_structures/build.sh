@@ -2,6 +2,7 @@
 
 set -xe
 
+
 if [ ! -d "./build" ]; then
 
     mkdir ./build
