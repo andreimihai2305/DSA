@@ -23,7 +23,7 @@ int d_alloc(DynamicArray *arr, int size)
     printf("Size set succesfully: arr->size = %d\n", arr->size);
     arr->count = 0;
     printf("Count set succesfully: arr->count = %d\n", arr->count);
-    arr->items = (int*) malloc(size * sizeof(int));
+    arr->items = malloc(size * sizeof(int));
     if (arr->items == NULL) return -1;
     printf("Items set succesfully: arr->items = %p\n", arr->items);
     return 0;
@@ -39,7 +39,7 @@ int dynamic_append(DynamicArray *arr, int item)
     else
     {
         arr->size += 20;
-        arr->items = (int*)realloc(arr->items, (arr->size)*sizeof(int));
+        arr->items = realloc(arr->items, (arr->size)*sizeof(int));
         if(arr->items == NULL) return -1;
         arr->items[arr->count] = item;
     }
