@@ -1,3 +1,4 @@
+#define QUEUE_IMPLEMENTATION
 #include "queue.h"
 #include <stdio.h>
 

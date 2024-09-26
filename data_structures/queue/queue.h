@@ -1,12 +1,26 @@
+#ifndef QUEUE_H
+#define QUEUE_H
+
 #include <stdlib.h>
 #include <stdbool.h>
 #include "dynamic_array.h"
+
 
 typedef struct  {
     DynamicArray* queue;
     int* front;
     int* back;
 } Queue;
+
+Queue* init_queue(int size);
+int push(Queue* q, int item);
+int pop(Queue* q);
+int front(Queue* q);
+int back(Queue* q);
+int size(Queue* q);
+bool empty(Queue* q);
+
+#ifdef QUEUE_IMPLEMENTATION
 
 Queue* init_queue(int size)
 {
@@ -71,3 +85,7 @@ bool empty(Queue* q)
     else if (q->queue->count == 0) return true;
     else return false;
 }
+
+#endif // QUEUE_IMPLEMENTATION
+
+#endif // QUEUE_H
