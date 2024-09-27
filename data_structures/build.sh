@@ -12,4 +12,5 @@ cc -o ./build/linked_list ./linked-list/linked_list.c
 cc -o ./build/queue -I./dynamic-array/ ./queue/queue.c
 cc -o ./build/main -I./dynamic-array/ ./main.c
 cc -o ./build/stack ./stack/stack.c
+cc -o ./build/hash_table ./hash-table/hash_table.c
 
