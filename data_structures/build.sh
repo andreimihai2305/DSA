@@ -13,4 +13,5 @@ cc -o ./build/queue -I./dynamic-array/ ./queue/queue.c
 cc -o ./build/main -I./dynamic-array/ ./main.c
 cc -o ./build/stack ./stack/stack.c
 cc -o ./build/hash_table ./hash-table/hash_table.c
+cc -o ./build/binary_tree ./binary-tree/binary_tree.c
 
